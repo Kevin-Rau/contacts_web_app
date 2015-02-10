@@ -1,0 +1,32 @@
+<h1>Users</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Login</th>
+      <th>Name</th>
+      <th>Admin</th>
+      <th>Actions</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in ac.accounts">
+      <td>{{user.login}}</td>
+      <td>{{user.name}}</td>
+      <td><input type="checkbox" disabled="disabled" ng-model="user.admin"></td>
+      <td ng-show="user.login !== 'admin'">
+        <a class="btn btn-primary" ng-href="#/edit_user/{{user.login}}" role="button">
+          <span class="glyphicon glyphicon-edit"></span> Edit
+        </a>
+        <a class="btn btn-danger" ng-href="#/delete_user/{{user.login}}" role="button">
+          <span class="glyphicon glyphicon-remove"></span> Delete
+        </a>
+      </td>
+      <td ng-hide="user.login !== 'admin'">
+        &nbsp;
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a class="btn btn-primary" href="#/user" role="button">Add New User</a></p>
+

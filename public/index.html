@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Contacts</title>
+
+    <link href="js/vendors/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="js/vendors/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
+  </head>
+  <body ng-controller="MainController as mc">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-2">&nbsp;</div>
+        <nav class="navbar navbar-inverse col-lg-8">
+          <div class="container-fluid">
+            <div class="navbar-left">
+              <p class="navbar-text"><a href="#/">Home</a></p>
+            </div>
+            <div class="navbar-right">
+              <p ng-hide="mc.user.login" class="navbar-text"><a href="#/login">Login</a></p>
+              <p ng-show="mc.user.login" class="navbar-text"><a href="#/logout">Logout {{mc.user.name}}</a></p>
+            </div>
+          </div>
+        </nav>
+        <div class="col-lg-2">&nbsp;</div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2">&nbsp;</div>
+        <div class="col-lg-8">
+          <div ng-view></div>
+        </div>
+        <div class="col-lg-2">&nbsp;</div>
+      </div>
+    </div>
+    <script data-main="js/main" src="js/vendors/requirejs/require.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<h1>Contacts</h1>
+<div ng-hide="mc.user.login">
+  <p>You are not currently logged in.</p>
+</div>
+<div ng-show="mc.user.login">
+  <p>Welcome, {{mc.user.name}}</p>
+  <p>Manage your <a href="#/contacts">contacts</a>.</p>
+</div>
+<div ng-show="mc.user.admin">
+  <p>Manage the <a href="#/users">users</a> of this system.</p>
+</div>
