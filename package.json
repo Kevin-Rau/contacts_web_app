@@ -1,7 +1,11 @@
 {
-  "name": "web_app",
+  "name": "contacts_web_app",
   "version": "0.0.1",
   "description": "An example web app implemented in Node and Angular",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cu-data-engineering-s15/contacts_web_app.git"
+  },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
