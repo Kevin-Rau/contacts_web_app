@@ -1,3 +1,6 @@
 .DS_Store
 node_modules
 vendors
+lib/contacts.db
+lib/secret.db
+lib/users.db
